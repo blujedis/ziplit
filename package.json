@@ -4,10 +4,10 @@
   "description": "ES6 Template literal strings helper and compiler.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "clean": "rimraf ./dist",
+    "build": "npm run clean && tsc",
     "watch": "tsc -w",
     "start": "npm run watch",
-    "prepublish": "npm run build",
     "test": "mocha test/**/*.spec.ts* --require ./register.js --bail"
   },
   "repository": {
@@ -37,6 +37,7 @@
     "@types/node": "^12.7.2",
     "chai": "^4.2.0",
     "mocha": "^6.2.0",
+    "rimraf": "^3.0.0",
     "ts-node": "^8.3.0",
     "tslint": "^5.19.0",
     "typescript": "^3.5.3"
